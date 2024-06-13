@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYOTEK - Jantes de Voiture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-FbYHg5SwSVZQYgHuTl2l9CQJ7OfyoxGqlrn3J1d0ITz5cQ+L5eMXbs8ZfuSRFV9T91elYeP7HwJtofdQ6Ha1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 40px 20px; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header .logo {
+            width: 250px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.1em;
+            margin: 10px 0 0;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        header::before, header::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        header::before {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+        header::after {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+        }
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .triangle-top-right {
+            border-width: 0 100px 100px 0;
+            border-color: transparent #b81717 transparent transparent;
+            top: 0;
+            right: 0;
+        }
+        .triangle-bottom-left {
+            border-width: 100px 0 0 100px;
+            border-color: transparent transparent transparent #b81717;
+            bottom: 0;
+            left: 0;
+        }
+        nav {
+            background-color: #495057;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #f8f9fa;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            padding: 15px 0;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #b81717;
+        }
+        .container {
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .about {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+        }
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .about::before,
+        .about::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: #b81717;
+            width: 50px;
+        }
+        .about::before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .about::after {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 1.2em;
+            color: #b81717;
+            margin: 10px 0;
+        }
+        .product button {
+            background-color: #b81717;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product button:hover {
+            background-color: #8f1414;
+        }
+        footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-social-icons {
+            margin: 20px 0;
+        }
+        .footer-social-icons a {
+            color: #f8f9fa;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .footer-social-icons a:hover {
+            color: #b81717;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="triangle triangle-top-right"></div>
+        <div class="triangle triangle-bottom-left"></div>
+        <img src="https://i.imgur.com/Vz81GEl.png" alt="Logo de KYOTEK" class="logo">
+        <p>Les meilleures jantes pour votre voiture</p>
+    </header>
+    <nav>
+        <a href="KYOTEK.html">Accueil</a>
+        <a href="apropos de nous.html">À propos</a>
+        <a href="cart.html">Panier</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="about" data-aos="fade-up">
+            <h2>À propos de nous</h2>
+            <p>Chez KYOTEK, nous sommes passionnés par les voitures et nous croyons que chaque détail compte. Nos jantes sont conçues pour offrir une performance supérieure et un style inégalé.</p>
+        </section>
+        <section id="products" class="gallery" data-aos="fade-up">
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Jante 1">
+                <h3>Jante Sport</h3>
+                <p>150€</p>
+                <button onclick="addToCart('Jante Sport', 150)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Jante 2">
+                <h3>Jante Classique</h3>
+                <p>120€</p>
+                <button onclick="addToCart('Jante Classique', 120)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Jante 3">
+                <h3>Jante Premium</h3>
+                <p>200€</p>
+                <button onclick="addToCart('Jante Premium', 200)">Ajouter au panier</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 KYOTEK. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function addToCart(product, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ product, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Produit ajouté au panier !');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Any other DOMContentLoaded tasks can be done here
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-28/2KFHktv0aN0C6yH+Ql9ZBwoJvMmZRikS3Q4qK5ER10dtfyRexQc9SwAsB+pbE5Oaq84dE1f+BZpbr8fw3+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

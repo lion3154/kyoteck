@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYOTEK - À propos de nous</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-FbYHg5SwSVZQYgHuTl2l9CQJ7OfyoxGqlrn3J1d0ITz5cQ+L5eMXbs8ZfuSRFV9T91elYeP7HwJtofdQ6Ha1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header .logo {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.1em;
+            margin: 10px 0 0;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        header::before, header::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        header::before {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+        header::after {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+        }
+        nav {
+            background-color: #495057;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #f8f9fa;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            padding: 15px 0;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #b81717;
+        }
+        .container {
+            padding: 30px 20px;
+        }
+        .about {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .about img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .team-member {
+            text-align: center;
+            max-width: 200px;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h3 {
+            font-size: 1.3em;
+            margin: 10px 0 5px;
+        }
+        .team-member p {
+            font-size: 1em;
+            color: #666;
+        }
+        footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: #f8f9fa;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #b81717;
+        }
+        footer .logos {
+            margin: 20px 0;
+        }
+        footer .logos img {
+            width: 150px;
+            margin: 0 10px;
+        }
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .triangle-top-right {
+            border-width: 0 100px 100px 0;
+            border-color: transparent #b81717 transparent transparent;
+            top: 0;
+            right: 0;
+        }
+        .triangle-bottom-left {
+            border-width: 100px 0 0 100px;
+            border-color: transparent transparent transparent #b81717;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header data-aos="fade-down">
+        <img src="bkt.png" alt="Logo KYOTEK" class="logo">
+        <p>Excellence en création de jantes de voiture</p>
+        <div class="triangle triangle-top-right"></div>
+        <div class="triangle triangle-bottom-left"></div>
+    </header>
+    <nav>
+        <a href="/Users/maxencegregoire/Desktop/kyotek/KYOTEK.html">Accueil</a>
+        <a href="/Users/maxencegregoire/Desktop/kyotek/contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <section class="about" data-aos="fade-up">
+            <h2>À propos de nous</h2>
+            <p>KYOTEK est une entreprise innovante dédiée à la conception et à la fabrication de jantes de voiture de haute qualité. Fondée en 2024, nous combinons technologie de pointe et design élégant pour offrir les meilleures jantes du marché.</p>
+            <img src="your-team-photo.jpg" alt="Équipe KYOTEK">
+            <p>Notre mission est de transformer chaque véhicule avec nos produits de qualité supérieure, en assurant sécurité, performance et esthétique. Chez KYOTEK, nous croyons en l'importance de l'innovation continue, de l'excellence en ingénierie et de la satisfaction totale de nos clients.</p>
+        </section>
+        <section class="team" data-aos="fade-up">
+            <h2>Notre équipe</h2>
+            <div class="team-member">
+                <img src="/Users/maxencegregoire/Desktop/kyotek/image/IMG_3830.png" alt="Membre de l'équipe">
+                <h3>Maxence Gregoire </h3>
+                <p>Ingénieur chef de communication</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/maxencegregoire/Desktop/kyotek/image/IMG_3827.png" alt="Membre de l'équipe">
+                <h3>Florian Warnecke</h3>
+                <p>Ingénieur polyvalent</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/maxencegregoire/Desktop/kyotek/image/IMG_3826.png" alt="Membre de l'équipe">
+                <h3>Céleste Falourd</h3>
+                <p>Ingénieur polyvalent</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/maxencegregoire/Desktop/kyotek/image/IMG_3828.png" alt="Membre de l'équipe">
+                <h3>Elliot Sauvé</h3>
+                <p>Ingénieur contrôle expert</p>
+            </div>
+            <div class="team-member">
+                <img src="/Users/maxencegregoire/Desktop/kyotek/image/IMG_3829.png" alt="Membre de l'équipe">
+                <h3>Lenny Hounkpati</h3>
+                <p>Ingénieur bras mécanique</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="triangle triangle-top-right"></div>
+        <div class="triangle triangle-bottom-left"></div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="logos">
+            <img src="Logo_IUT_Toulouse_GEII_couleurs.png" alt="Logo Université GE2I">
+            <img src="logo UT3_RVB.png" alt="Logo Université Ponsan">
+        </div>
+        <p>&copy; 2024 KYOTEK. Tous droits réservés.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-28/2KFHktv0aN0C6yH+Ql9ZBwoJvMmZRikS3Q4qK5ER10dtfyRexQc9SwAsB+pbE5Oaq84dE1f+BZpbr8fw3+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
